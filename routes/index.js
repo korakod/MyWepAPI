@@ -11,6 +11,15 @@ router.get('/', function(req, res, next) {
 router.get('/login' , (req, res, next) => {
   res.json({message:'Hi sir.'});
 });
+router.post('/users/login' , (req, res, next) => {
+  
+  let userName = req.body.userName;
+  let passWord = req.body.passWord;
+
+  console.log( 'User name: ' + userName + ' PWD: ' + passWord );
+  res.json({signin:1});
+});
+
 router.get('/users' , (req, res, next) => {
   userArray = [
     { name: 'gum', tel: '01129292', email: 'gum@gmail.com' }
@@ -18,7 +27,6 @@ router.get('/users' , (req, res, next) => {
     , { name: 'hum', tel: '01231234', email: 'hum@gmail.com' }
     , { name: 'sum', tel: '01231231', email: 'sum@gmail.com' }
     , { name: 'aum', tel: '01231232', email: 'aum@gmail.com' }
-
   ]
   res.json(userArray);
 });
