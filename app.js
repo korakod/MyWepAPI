@@ -7,11 +7,8 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-<<<<<<< HEAD
 var events = require('./routes/events');
-=======
 var products = require('./routes/product');
->>>>>>> e31c51304ea3ef0f57096bc7d108265a1896ee06
 
 var app = express();
 
